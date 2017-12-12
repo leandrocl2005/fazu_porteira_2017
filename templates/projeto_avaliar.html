@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block container %}
+    <!-- Contact Section -->
+    <section id="projetos">
+      <div class="container">
+        <hr class="my-4">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h5  class="text-left text-uppercase">{{ projeto.nome }}</h5>
+            <div class='row'>
+              <div class='col-sm-6 col-sm-offset-3'>
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nota</th>
+                      <th scope="col">Estrelas</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{{nota}}</td>
+                      <td>{{estrelas}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p><b>Ocorrências</b></p>
+            <p>{{ ocorrencias }}</p>
+            <a href="{% url 'nova_avaliacao' pk=avaliacao.pk %}" class="top-menu"><span class="glyphicon glyphicon-search"> <b>Nova avaliação</b></span></a></a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock container %}

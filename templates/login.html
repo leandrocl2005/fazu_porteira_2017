@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block container %}
+<!-- Contact Section -->
+    <section id="login">
+      <div class="container">
+        <hr class="star-dark mb-5">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Entrar como avaliador</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+              <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit">Entrar</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock container %}
