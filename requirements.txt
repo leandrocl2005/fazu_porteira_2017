@@ -1,0 +1,6 @@
+-f /usr/share/pip-wheels
+Django==1.11.4
+django-bootstrap-toolkit==2.15.0
+django-crispy-forms==1.7.0
+pytz==2017.3
+whitenoise==2.0.6
